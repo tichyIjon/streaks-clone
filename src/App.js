@@ -1,25 +1,43 @@
 import logo from './logo.svg';
 import './App.css';
+import NewHabit from './components/NewHabit';
+import HabitCreator from './components/HabitCreator';
+import Habit from './components/Habit';
+import data from './components/data';
+
+let version = 0.1;
 
 function App() {
+  let habits = data.map(habit=>{
+    return (
+      <Habit 
+        title = {habit.title}
+        emote = {habit.emote}
+      />
+    )
+  })
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='container'>
+        <div className='visable'>
+          {habits}
+          <NewHabit />
+        </div>
+        <div className='invisable'>
+          <HabitCreator />
+        </div>
+        </div>
+    <footer>2023 nyaa development |<span className='bold'> streaks-clone ver.{version} </span></footer>
     </div>
   );
 }
+
+
+function habitCreatorShow() {
+  let visable = document.querySelector('.visable')
+  visable.style.display = "none"
+};
+
 
 export default App;

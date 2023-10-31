@@ -1,38 +1,165 @@
-.App {
-  text-align: center;
+html {
+	box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*, *:before, *:after {
+	box-sizing: inherit;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.bold {
+  font-weight: 700;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+
+  height: 97vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.visable {
+  display: flex;
+}
+
+footer {
+  margin-left: 10px;
+  align-self: flex-end;
+  color: black;
+}
+
+.invisable {
+  display: none;
+}
+
+.newHabitButton {
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 10px;
+
+  width: 150px;
+  height: 150px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 100px;
+  font-weight: 100;
+
+  transition: background 0.1s linear;
+
+  margin: 5px;
+}
+
+.habit {
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 10px;
+
+  width: 150px;
+  height: 150px;
+
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+
+  font-size: 30px;
+  font-weight: 400;
+
+  margin: 5px;
+  transition: background 0.1s linear;
 }
 
-.App-link {
-  color: #61dafb;
+.habit:hover {
+  background-color: lightgreen;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.emote {
+  font-size: 50px;
+}
+
+.newHabitButton:hover {
+  background-color:coral;
+  cursor: pointer;
+}
+
+.habitCreator {
+  border: 3px solid black;
+  border-radius: 10px;
+  
+  display: flex;
+  flex-direction: column;
+
+  height: 500px;
+  width: 500px;
+
+  padding: 10px;
+}
+
+.habitCreation {
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.exit-btn {
+  border: 3px solid black;
+  background-color: white;
+  border-radius: 10px;
+
+  height: 50px;
+  width: 50px;
+
+  font-size: 30px;
+  transition: background 0.1s linear;
+}
+
+.exit-btn:hover {
+  background-color: coral;
+}
+
+.habit-title {
+  margin: 10px;
+  width: 100%;
+  height: 80px;
+
+  padding: 10px;
+  font-size: 40px;
+
+  border: 3px solid black;
+}
+
+.habit-emote {
+  margin: 10px;
+  width: 100%;
+  height: 80px;
+
+  padding: 10px;
+  font-size: 40px;
+
+  border: 3px solid black;
+}
+
+.done-btn {
+  background-color: white;
+
+  border: 3px solid black;
+  height: 100px;
+
+  font-size: 40px;
+
+  transition: background 0.1s linear;
+}
+
+.done-btn:hover {
+  background-color: coral;
 }
